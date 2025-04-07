@@ -31,13 +31,11 @@ console.log(pcNum);
 const sumNum = pcNum + userNum;
 console.log(sumNum);
 
-let esito = "";
-if (userChoice === "pari" && isPari(sumNum)) {
-  esito += "user win";
-} else if (userChoice === "dispari" && !isPari(sumNum)) {
-  esito += "user win";
-} else {
-  esito += "pc win";
-}
+let esito;
+
+(userChoice === "pari" && isPari(sumNum)) ||
+(userChoice === "dispari" && !isPari(sumNum))
+  ? (esito = "user win")
+  : (esito = "pc win");
 
 console.log(esito);
