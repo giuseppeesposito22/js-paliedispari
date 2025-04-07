@@ -6,7 +6,7 @@
 // Dichiariamo chi ha vinto.
 
 // funzione per generare un numero random
-function randomNumber(max, min) {
+function randomNumber(max, min = 1) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -25,7 +25,7 @@ console.log(userChoice);
 const userNum = parseInt(prompt("Scegli un numero tra 1 e 5..."));
 console.log(userNum);
 
-const pcNum = randomNumber(5, 1);
+const pcNum = randomNumber(5);
 console.log(pcNum);
 
 const sumNum = pcNum + userNum;
