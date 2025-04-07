@@ -12,11 +12,7 @@ function randomNumber(max, min = 1) {
 
 // fuzione per verificare se un numero è pari
 function isPari(num) {
-  if (num % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return num % 2 === 0;
 }
 
 const userChoice = prompt("scegli tra pari o dispari");
@@ -31,11 +27,10 @@ console.log(pcNum);
 const sumNum = pcNum + userNum;
 console.log(sumNum);
 
-let esito;
-
-(userChoice === "pari" && isPari(sumNum)) ||
-(userChoice === "dispari" && !isPari(sumNum))
-  ? (esito = "user win")
-  : (esito = "pc win");
+let esito =
+  (userChoice === "pari" && isPari(sumNum)) ||
+  (userChoice === "dispari" && !isPari(sumNum))
+    ? "user win"
+    : "pc win";
 
 console.log(esito);
